@@ -43,10 +43,11 @@ public class UsuarioDAO implements Serializable{
 		super();
 	}
 
-	public UsuarioDAO(Long idusuario, String nombre, String correo, Date fec_nacimiento) {
+	public UsuarioDAO(Long idusuario, String nombre, String apellido, String correo, Date fec_nacimiento) {
 		super();
 		this.idusuario = idusuario;
 		this.nombre = nombre;
+		this.apellido = apellido;
 		this.correo = correo;
 		this.fec_nacimiento = fec_nacimiento;
 	}
@@ -67,6 +68,14 @@ public class UsuarioDAO implements Serializable{
 		this.nombre = nombre;
 	}
 
+	public String getApellido() {
+		return apellido;
+	}
+
+	public void setApellido(String apellido) {
+		this.apellido = apellido;
+	}
+
 	public String getCorreo() {
 		return correo;
 	}
@@ -83,6 +92,4 @@ public class UsuarioDAO implements Serializable{
 		this.fec_nacimiento = fec_nacimiento;
 	}
 	
-	
-
 }

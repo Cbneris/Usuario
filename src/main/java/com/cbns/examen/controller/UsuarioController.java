@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -32,6 +33,11 @@ public class UsuarioController implements Serializable{
 	@GetMapping
 	public ResponseEntity<Iterable<UsuarioDAO>> listarUsuarios() {
 		return ResponseEntity.ok().body(userSerivice.findAll());
+	}
+	
+	@GetMapping("/listaPag")
+	public ResponseEntity<Iterable<UsuarioDAO>> listarUsuarios(Pageable pageable) {
+		return ResponseEntity.ok().body(userSerivice.findAll(pageable));
 	}
 	
 	@GetMapping("/buscarId/{id}")
