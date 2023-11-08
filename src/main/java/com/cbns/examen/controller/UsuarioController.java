@@ -20,6 +20,12 @@ import com.cbns.examen.service.UsuarioService;
 
 @RestController
 @RequestMapping("users")
+/**
+ * 
+ * @author Christian Brandon Neri Sanchez
+ * Controlador para acceder a los métodos REST de Usuarios
+ *
+ */
 public class UsuarioController implements Serializable{
 
 	/**
