@@ -1,0 +1,1 @@
+INSERT INTO TT_USUARIO (idusuario, nombre, apellido, correo, fec_nacimiento) VALUES (1, 'Christian Brandon', 'Neri Sanchez', 'cbneris@gmail.com', '1990-06-15');
